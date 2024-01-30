@@ -33,6 +33,7 @@ app.use("/api/v1", userRoute);
 //=============================for live api check===============================
 
 //
+
 app.use(express.static(path.join(__dirname, "../frontend/build")));
 
 app.get("*", (req, res) => {

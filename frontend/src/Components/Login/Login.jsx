@@ -52,11 +52,11 @@ const Login = () => {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
-        <Link to="/forgot/password">
+        <Link to="/forgot/password" className="new-user">
           <Typography>Forgot Password?</Typography>
         </Link>
         <Button type="submit">Login</Button>
-        <Link to="/register">
+        <Link to="/register" className="new-user">
           <Typography>New User?</Typography>
         </Link>
       </form>

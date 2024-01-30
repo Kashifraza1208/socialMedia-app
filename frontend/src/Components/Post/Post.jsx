@@ -47,7 +47,8 @@ const Post = ({
   const [captionValue, setCaptionValue] = useState(caption);
   const [captionToggle, setCaptionToggle] = useState(false);
 
-  const handleLike = async () => {
+  const handleLike = async (e) => {
+    e.preventDefault();
     setLiked(!liked);
     await dispatch(likePost(postId));
     if (isAccount) {
@@ -65,7 +66,7 @@ const Post = ({
     });
   }, [likes, user._id]);
 
-  const addCommentHandler = async () => {
+  const addCommentHandler = async (e) => {
     await dispatch(commentOnPost(postId, commentsValue));
     if (isAccount) {
       dispatch(getMyPost());
@@ -75,12 +76,11 @@ const Post = ({
   };
 
   const updateCaptionHandler = (e) => {
-    e.preventDefault();
     dispatch(updateCaption(captionValue, postId));
     dispatch(getMyPost());
   };
 
-  const deletePostHandler = async () => {
+  const deletePostHandler = async (e) => {
     await dispatch(deletePost(postId));
     dispatch(getMyPost());
     dispatch(loadUser());

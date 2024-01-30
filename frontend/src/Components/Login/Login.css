@@ -38,6 +38,17 @@
   margin: 2vmax;
 }
 
+.new-user {
+  background: #ffffff;
+}
+
+.new-user:hover {
+  color: #ffffff;
+  padding: 0px 8px;
+  border-radius: 8px;
+  background-color: tomato;
+}
+
 @media screen and (max-width: 600px) {
   .loginForm {
     width: 100%;

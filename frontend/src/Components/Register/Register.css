@@ -53,6 +53,17 @@
   margin: 2vmax;
 }
 
+.user {
+  background: #ffffff;
+}
+
+.user:hover {
+  color: #ffffff;
+  padding: 0px 8px;
+  border-radius: 8px;
+  background-color: tomato;
+}
+
 @media screen and (max-width: 600px) {
   .registerForm {
     width: 100%;

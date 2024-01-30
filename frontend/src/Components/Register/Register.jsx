@@ -78,7 +78,7 @@ const Register = () => {
           className="registerInputs"
           onChange={(e) => setPassword(e.target.value)}
         />
-        <Link to="/">
+        <Link to="/" className="user">
           <Typography>Already Signed Up? Login Now</Typography>
         </Link>
         <Button disabled={loading} type="submit">
